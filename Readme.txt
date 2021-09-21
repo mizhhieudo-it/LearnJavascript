@@ -1,0 +1,1 @@
+Đây là quá trình học javascript của tôi !
