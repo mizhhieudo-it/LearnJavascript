@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<style>
+    *{ 
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+ }
+    .num{
+        height: 30px;
+        width: 30px;
+        background-color: grey;
+        color: white;
+        padding: 10px;
+        margin-left: 15px;
+
+    }
+    .pheptinh{
+        height: 30px;
+        width: 30px;
+        background-color: yellow;
+        color: black;
+        padding: 10px;
+        margin-left: 15px;
+
+    }
+    /* .num :hover{
+        background-color: red;
+        color: white;
+    } */
+</style>
+<body>
+    
+    <div style="margin: auto;" class="border border-light p-3 w-50 shadow">
+        <h3 style="text-align: center;color: red;">ứng dụng máy tính</h3>
+        <label>Nhập vào số A</label>
+        <input type="text" id="A" readonly >
+        <br>
+        <label>Nhập vào số B</label readonly>
+        <input type="text" id="B" readonly>
+        <br>
+        <label>Kết quả</label>
+        <input type="text" style="margin-left: 47px;" id="ht" readonly>
+        <div class="container">
+            <div class="row" style="margin-left: 20px;margin-bottom: 20px;">
+                <button class="num" id="num1" onclick="getvaluenum1()">1</button>
+                 <button class="num" id="num2" onclick="getvaluenum2()">2</button>
+                <button class="num" id="num3">3</button>
+                <button class="pheptinh" id="phepcong" onclick="getPlus()" >+</button>
+    
+            </div>
+            <div class="row" style="margin-left: 20px;margin-bottom: 20px;">
+                <button class="num" id="num4">4</button>
+                 <button class="num" id="num5">5</button>
+                <button class="num" id="num6">6</button>
+                <button class="pheptinh">-</button>
+    
+            </div>
+            <div class="row" style="margin-left: 20px;margin-bottom: 20px;">
+                <button class="num" id="7">7</button>
+                 <button class="num" id="8">8</button>
+                <button class="num" id ="9">9</button>
+                <button class="pheptinh" onclick="kq()">=</button>
+    
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+<script src="main.js">
+
+</script>
+</html>
