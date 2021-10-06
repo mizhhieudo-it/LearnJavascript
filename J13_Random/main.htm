@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Búa bao Kéo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+    }
+</style>
+
+<body id="bgmode">
+    <div class="row">
+        <div class="col-2">
+            <button onclick="DarkMode()" class="btn btn-outline-dark">Đổi Giao Diện</button>
+        </div>
+        <div class="col-10">
+            <h2 style="text-align: center; color: red;">Trò chơi oẳn tù tì</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-2">
+            <div class="luatchoi" style="border: 1px solid red;height: 100%;margin-top: 40px;border-radius: 10px;">
+                <h4>Luật chơi của game oẳn tù tì</h4>
+                <p>
+                    Người chơi đứng quay mặt vào nhau, tay nắm chặt khi có hiệu lệnh bắt đầu thì cùng nhau đọc
+
+                    Oẳn tù tì
+
+                    Ra cái gì?
+
+                    Ra cái này!
+
+                    Đọc đến câu cuối “ra cái này” thì cùng đưa tay ra trước theo các dạng sau:
+
+                    Cả bàn tay nắm lại là cái búa
+
+                    cả bàn tay xòe ra là tờ giấy
+
+                    Ngón trỏ và ngón giữa giơ ra các ngón khác nắm lại là cái kéo
+
+                    Sau khi giơ tay ra người chơi sẽ dùng luật để xác định thắng thua
+                </p>
+
+            </div>
+        </div>
+        <div class="col-9">
+            <div class="row" style="margin-top: 40px;">
+                <div class="col-2"></div>
+                <div class="col-3">
+                    <div class="row">
+                        <h3> Người chơi</h3>
+                    </div>
+                    <div class="row">
+                        <img onclick="GameOTT('1')" id="bao" src="images/bao.PNG" alt="" height="150px" width="150px" style="border-radius: 50%;" value="1">
+                    </div>
+                    <div class="row">
+                        <img onclick="GameOTT('0')" id="bua" src="images/bua.PNG" alt="" height="150px" width="150px" style="border-radius: 50%;" value="0">
+                    </div>
+                    <div class="row">
+                        <img onclick="GameOTT('2')" id="keo" src="images/keo.PNG" alt="" height="150px" width="150px" style="border-radius: 50%;" value="2">
+                    </div>
+                    
+                </div>
+                <div class="col-3">
+                    <h3>Kết quả</h3>
+                    <div class="row">
+                        <img src="images/cup.PNG" alt="" height="150px" width="150px" style="border-radius: 15px;margin-top: 30%;">
+                        <h3 id ="kqshow" style="color:rgb(109, 93, 3);"></h3>
+                       
+                    </div>
+                    
+                </div>
+                <div class="col-3">
+                    <h3>Máy Chơi</h3>
+                    <div class="row">
+                        <img src="images/bao.PNG" id="MachineKQ" alt="" height="150px" width="150px" style="border-radius: 50%;">
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+<script src="main.js">
+</script>
+
+</html>

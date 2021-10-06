@@ -95,18 +95,29 @@ var StringShow = `<h1> Thông Tin Sinh Viên</h1>
     <th scope="col">Lớp</th>
     <th scope="col">SDT</th>
     <th scope="col">Ảnh</th>
+    <th scope="col">Thao Tác</th>
     </tr>
     </thead> 
     <tbody>`;
-    ThongTinSV.forEach(element => {
-        StringShow += `<tr>`;
-        for(var i = 0 ; i< element.length-1;i++){
-            StringShow += `<td>${element[i]}</td>`;
-        }
-        StringShow += `<td><img src="${element[element.length-1]}"  height='100' width='100'/></td>`;
-        StringShow += `</tr>`;
+//     for(var j = 0 ;j<ThongTinSV.length;i++){
+//         StringShow += `<tr>`;
+//         for(var i = 0 ; i< 4;i++){
+//             StringShow += `<td>${ThongTinSV[j][i]}</td>`;
+//         }
+//         StringShow += `<td><img src="${ThongTinSV[j][4]}"  height='100' width='100'/></td>`;
+//         StringShow += `<td><button class="btn btn-outline-danger">Xóa</button></td>`;
+//         StringShow += `</tr>`;
     
-}); 
+// };  
+    var i ; 
+    var j ;
+        for(i = 0 ;i < ThongTinSV.length ;i++){
+            console.log(ThongTinSV[i]);
+            for(j=0;j< ThongTinSV[i];j++){
+                console.log("thong sinh vien thu"+i);
+                console.log(ThongTinSV[i][j]);
+            }
+        }
 StringShow += `</tbody> 
 </table>
 `   ;
