@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Loop JS</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    @keyframes ani {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+
+  <body>
+    <div id="Slideshow">
+      <img
+        id="imgshow"
+        style="animation-delay: 12s"
+        src="https://tailieufree.net/wp-content/uploads/2018/04/hinh-nen-vinh-ha-long-quang-ninh-dep.jpg"
+        alt=""
+        height="300px"
+        width="100%"
+        style="position: relative;animation: ani 1s infinite;"
+      />
+      <button
+        class="btn btn-outline-light"
+        onclick="preimg()"
+        style="
+          border-radius: 45%;
+          opacity: 0.3;
+          position: absolute;
+          left: 0;
+          top: 80px;
+        "
+      >
+        <i class="fas fa-backward fa-3x"></i>
+      </button>
+      <button
+        class="btn btn-outline-light"
+        onclick="nextimg()"
+        style="
+          border-radius: 45%;
+          opacity: 0.3;
+          position: absolute;
+          right: 0;
+          top: 80px;
+        "
+      >
+        <i class="fas fa-forward fa-3x"></i>
+      </button>
+    </div>
+    <!-- //<p id="productsID"></p> -->
+    <table class="table-bordered">
+      <tr>
+        <thead>
+          <th>Tên</th>
+          <th>Giá Sản Phẩm</th>
+          <th>Thao Tác</th>
+        </thead>
+      </tr>
+      <tbody id="show_list_item">
+        <!-- Do some thing -->
+      </tbody>
+    </table>
+  </body>
+  <script>
+    var ListIMG = [
+      "https://tailieufree.net/wp-content/uploads/2018/04/hinh-nen-vinh-ha-long-quang-ninh-dep.jpg",
+      "https://s3.cloud.cmctelecom.vn/tinhte1/2017/12/4205775_C.jpg",
+      "https://thuthuatnhanh.com/wp-content/uploads/2021/04/hinh-anh-nui-dep-o-Bac-My.jpg",
+    ];
+    var getimg = document.getElementById("imgshow");
+    var i = 0;
+    function nextimg() {
+
+      if (i >= ListIMG.length - 1) {
+        i = 2;
+      } else {
+        i++;
+      }
+      console.log(i);
+      getimg.src = ListIMG[i];
+      getimg.style.animation = "ani 1s 1";
+      getimg.style.animationDirection('alternate');   
+
+    }
+    function preimg() {
+      if (i <= 0) {
+        i = 0;
+      } else {
+        i--;
+      }
+      getimg.src = ListIMG[i];
+      getimg.style.animation = "ani 1s 1";     
+    }
+    //setInterval(nextimg,2000);
+  </script>
+</html>
