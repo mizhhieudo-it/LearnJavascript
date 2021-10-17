@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sinh viên</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <h4 class="display-4" style="color: orange;text-align: center;">Admin-Quản lý sinh viên</h4>
+    <div style="margin: auto;" class="border border-light shadow p-3 w-50">
+        <label for="NameStudent">Name Student</label>
+        <input type="text" name="NameStudent" id="NameStudent" class="form-control">
+        <label for="ClassName">Class Name</label>
+        <input type="text" name="ClassName" id="ClassName" class="form-control">
+        <label for="Born">Was Born</label>
+        <input type="text" name="Born" id="Born" class="form-control">
+        <button onclick="CreateStudent()" class="btn btn-outline-warning">Tạo Sinh Viên</button>
+    </div>
+    <h4 style="color: red;text-align: center;margin-top: 25px;">Table Show Data</h4>
+    
+    <div style="margin-left:40%;">
+        <!-- <button class="btn btn-outline-success" onclick="ViewStudent()">Hiển thị Dữ Liệu</button> -->
+        <table class="table-bordered">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Class </th>
+                    <th>Was Born </th>
+                </tr>
+            </thead>
+            <tbody id="BDTABLE">
+    
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+<script src="main.js"></script>
+</html>
