@@ -13,7 +13,7 @@ function getUser(id) {
     }, 2000);
     return 1 
 }
-// =====> vấn Problem need slove : how to get info user 
+// =====> Problem need slove : how to get info user 
 //== level 1 : callbacks
 function getUserUseCallBack(id,callback) {
     setTimeout(() => {
